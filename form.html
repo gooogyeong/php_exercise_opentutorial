@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form action="form.php" method="post">
+      <p><input type="text" name="title" placeholder="enter title" /></p>
+      <p>
+        <textarea name="description" placeholder="enter description"></textarea>
+      </p>
+      <input type="submit" />
+      <!--
+        <form>에 method="post"가 없으면
+        입력창에 예를들어 MySQL, MySQL is...이라 적고
+        submit버튼 누르면 주소가 http://127.0.0.1/form.php?title=MySQL&description=MySQL+is...로 바뀜
+        <input>과 <textarea>의 name은 query string의 parameter로, 입력값은 그 value로 들어오는 것
+        그리고 입력 창들을 감싸는 <form>의 action 값에 해당하는 도메인에 query string을 전달한다.
+        
+        그런데 보안상의 이유로 <form>으로 서버에 데이터를 생성하거나 지우는 방식은 권장되지 않는다.
+        주소에 title이나 description 같은 parameter 정보가 포함될 경우 
+        링크로 전달된 주소를 클릭함과 동시에 원치 않게 글이 작성되거나 삭제될 우려가 있기 때문.
+
+        URL로 데이터를 전달하는 방식은 데이터 생성, 삭제에는 쓰이지 않고
+        대신
+        -->
+    </form>
+  </body>
+</html>
